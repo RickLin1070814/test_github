@@ -4,9 +4,7 @@ for WIFI dongle BL-WA1200 with RTL8892BU chipset
 Only porting on ALi platform
 
 BL-WA1200 product specification.pdf - Product Spec.
-
 00013955-RTL88x2BU_WiFi_linux_v5.6.1.2_32629.20190321_COEX20180928-6a6a.zip - Reference Driver released
-
 rtl88x2BU_WiFi_linux_v5.6.1.2_32629.20190321_COEX20180928-6a6a - Linux driver folder
 
 ==========================================================
@@ -39,13 +37,13 @@ e.g.:
 ifeq ($(CONFIG_PLATFORM_I386_PC), y)
 EXTRA_CFLAGS += -DCONFIG_LITTLE_ENDIAN
 ARCH:=mips
-CROSS_COMPILE:= /home/rick/share/1714_test2/ali_M3728_DDK6_9/buildroot-6.9.1.1/output/host/usr/bin/mipsel-linux-
+CROSS_COMPILE:= /buildroot-6.9.1.1/output/host/usr/bin/mipsel-linux-
 KSRC:= ../output/build/linux-PDK1.15.0-20181212A
 endif
 
 b. wpa_supplicant_hostapd-0.8_rtw_r24647.20171025/wpa_supplicant/Makefile
 e.g.:
-CC=/home/rick/share/1714_test2/ali_M3728_DDK6_9/buildroot-6.9.1.1/output/host/usr/bin/mipsel-linux-gcc
+CC=/buildroot-6.9.1.1/output/host/usr/bin/mipsel-linux-gcc
 
 (4)Compile and copy the wifi driver
 #cd rtl88x2BU_WiFi_linux_v5.6.1.2_32629.20190321_COEX20180928-6a6a
